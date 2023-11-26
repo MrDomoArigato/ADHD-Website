@@ -48,7 +48,7 @@ jobs:
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: |
-          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}/${{ steps.branch.outputs.branch_name }}/"
+          bundle exec jekyll build
           echo "${{ steps.pages.outputs.base_path }}/${{ steps.branch.outputs.branch_name }}/"
         env:
           JEKYLL_ENV: production
@@ -63,10 +63,16 @@ jobs:
         run: |
           rm -rf ./${{ steps.branch.outputs.branch_name }} 
           mv ../${{ steps.branch.outputs.branch_name }} ./${{ steps.branch.outputs.branch_name }}
+          grep -rl 'src="/' ./${{ steps.branch.outputs.branch_name }} | xargs sed -i 's/src=\"\//src=\"\${{ steps.pages.outputs.base_path }}\/${{ steps.branch.outputs.branch_name }}\//g'
+          grep -rl 'href="/' ./${{ steps.branch.outputs.branch_name }} | xargs sed -i 's/href=\"\//href=\"\${{ steps.pages.outputs.base_path }}\/${{ steps.branch.outputs.branch_name }}\//g'
+          grep -rl 'url("/' ./${{ steps.branch.outputs.branch_name }} | xargs sed -i 's/url(\"\//url(\"\${{ steps.pages.outputs.base_path }}\/${{ steps.branch.outputs.branch_name }}\//g'
+      - name: Update 404 Page
+        if: ${{ steps.branch.outputs.branch_name == 'main' }}
+        run: cp ./${{ steps.branch.outputs.branch_name }}/404.html ./404.html
       - name: Push to Deployment
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git commit -m "Updated ${{ steps.branch.outputs.branch_name }}"
+          git commit -m "[BOT] Updated ${{ steps.branch.outputs.branch_name }}"
           git push
