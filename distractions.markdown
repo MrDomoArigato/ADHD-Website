@@ -1,5 +1,5 @@
 ---
 layout: distractions
-title: Contact
+title: Distractions
 permalink: /distract
 ---

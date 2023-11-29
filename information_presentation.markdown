@@ -1,5 +1,5 @@
 ---
 layout: info_present
-title: Contact
+title: Information Presentation
 permalink: /info-present
 ---

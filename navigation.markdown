@@ -1,5 +1,5 @@
 ---
 layout: navigation
-title: Contact
+title: Navigation
 permalink: /navigation
 ---

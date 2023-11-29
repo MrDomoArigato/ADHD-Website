@@ -1,5 +1,5 @@
 ---
 layout: decision_fatigue
-title: Contact
+title: Decision Fatigue
 permalink: /decide-fatigue
 ---
