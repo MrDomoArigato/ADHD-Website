@@ -25,13 +25,14 @@
 
             --color-5: #9CA9B4;
             --color-6: #FFFFFF;
+            --text-color: var(--bs-body-color);
             --win-bkg-color: var(--color-6);
             --win-bdr-color: var(--color-5);
-            --nav-color: var(--color-4);
+            --nav-color: var(--text-color);
             --nav-active: var(--color-3);
         }
 
-        /* @media (prefers-color-scheme: dark){
+        @media (prefers-color-scheme: dark){
             body {
                 --bkg-img: url("/ADHD-Website/Neko/assets/images/background-dark.png");
                 --color-1: #AFAFB6;
@@ -39,10 +40,13 @@
                 --color-3: #69639C;
                 --color-4: #110E24;
                 
+                --text-color: var(--color-6);
                 --win-bkg-color: var(--color-4);
                 --win-bdr-color: var(--color-1);
+                --nav-color: var(--text-color);
+                --nav-active: var(--color-3);
             }
-        } */
+        }
 
         body {
             --bdr-rad: 12px;
@@ -109,7 +113,7 @@
                         <div class="option" style="background-color: #F5BE4F;"></div>
                         <div class="option" style="background-color: #61C554;"></div>
                     </div>
-                    <div class="pane">
+                    <div class="pane" style="color: var(--text-color);">
                         
                     </div>
                 </div>
