@@ -1,0 +1,22 @@
+<style>
+    div.wrapper.nav {
+        position:absolute;
+        /* width: 35%; */
+        z-index: 3;
+        top: 4vh;
+        left: 25vw;
+    }
+</style>
+
+<div class="wrapper nav">
+    <div class="window" style="width:fit-content;position:absolute;">
+        <div class="taskbar" style="width:60vw;">
+            <div class="option" style="background-color: #ED6A5E;"></div>
+            <div class="option" style="background-color: #F5BE4F;"></div>
+            <div class="option" style="background-color: #61C554;"></div>
+        </div>
+        <div class="pane p-3" style="width:60vw;height:12vh;overflow:scroll;">
+            {% include navilinks.html %}
+        </div>
+    </div>
+</div>

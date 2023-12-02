@@ -11,5 +11,6 @@ Gemfile.lock
 
 #Custom file for testing locally
 test.markdown 
+_layouts/test.html
 
 .DS_Store

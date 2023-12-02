@@ -48,7 +48,6 @@
         }
 
         div.taskbar {
-            width:92vw;
             height:3vh;
 
             display: flex;
@@ -70,8 +69,7 @@
         }
 
         div.pane {
-            width:92vw;
-            min-height:90vh;
+            color: var(--text-color);
 
             overflow-wrap: break-word;
 
@@ -86,22 +84,23 @@
 
     <body>
         <div class="main">
+            {% include navibar.html %}
             <div class="wrapper">
                 <div class="window my-4" style="width:fit-content;position:absolute;margin-left:3vw;">
-                    <div class="taskbar">
+                    <div class="taskbar" style="width:92vw;">
                         <div class="option" style="background-color: #ED6A5E;"></div>
                         <div class="option" style="background-color: #F5BE4F;"></div>
                         <div class="option" style="background-color: #61C554;"></div>
                     </div>
-                    <div class="pane"></div>
+                    <div class="pane" style="width:92vw; min-height:90vh;"></div>
                 </div>
                 <div class="window my-5" style="width:fit-content;position:absolute;margin-left:4vw;">
-                    <div class="taskbar">
+                    <div class="taskbar" style="width:92vw;">
                         <div class="option" style="background-color: #ED6A5E;"></div>
                         <div class="option" style="background-color: #F5BE4F;"></div>
                         <div class="option" style="background-color: #61C554;"></div>
                     </div>
-                    <div class="pane" style="color: var(--text-color);">
+                    <div class="pane" style="width:92vw; min-height:90vh;">
                         {{ content }}
                     </div>
                 </div>

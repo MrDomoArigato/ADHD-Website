@@ -1,4 +1,4 @@
 ---
 layout: index
-title: ADHD in Websites
+title: Home
 ---
