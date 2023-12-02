@@ -60,7 +60,6 @@
         }
 
         div.taskbar {
-            width:92vw;
             height:3vh;
 
             display: flex;
@@ -82,8 +81,7 @@
         }
 
         div.pane {
-            width:92vw;
-            min-height:90vh;
+            color: var(--text-color);
 
             overflow-wrap: break-word;
 
@@ -98,22 +96,58 @@
 
     <body>
         <div class="main">
+            <style>
+    div.wrapper.nav {
+        position:absolute;
+        /* width: 35%; */
+        z-index: 3;
+        top: 4vh;
+        left: 25vw;
+    }
+</style>
+
+<div class="wrapper nav">
+    <div class="window" style="width:fit-content;position:absolute;">
+        <div class="taskbar" style="width:60vw;">
+            <div class="option" style="background-color: #ED6A5E;"></div>
+            <div class="option" style="background-color: #F5BE4F;"></div>
+            <div class="option" style="background-color: #61C554;"></div>
+        </div>
+        <div class="pane p-3" style="width:60vw;height:12vh;overflow:scroll;">
+            
+    <a class="link mx-1" href="/ADHD-Website/Neko/" data-replace="Home"><span class="p-0" style="font-size:xx-large;">Home</span></a>
+
+
+<a class="link mx-1" href="/ADHD-Website/Neko/distract" data-replace="Distractions"><span class="p-0" style="font-size:xx-large;">Distractions</span></a>
+
+
+<a class="link mx-1" href="/ADHD-Website/Neko/decide-fatigue" data-replace="Decision Fatigue"><span class="p-0" style="font-size:xx-large;">Decision Fatigue</span></a>
+
+
+<a class="link mx-1" href="/ADHD-Website/Neko/navigation" data-replace="Navigation"><span class="p-0" style="font-size:xx-large;">Navigation</span></a>
+
+
+<a class="link mx-1" href="/ADHD-Website/Neko/info-present" data-replace="Information Presentation"><span class="p-0" style="font-size:xx-large;">Information Presentation</span></a>
+
+        </div>
+    </div>
+</div>
             <div class="wrapper">
                 <div class="window my-4" style="width:fit-content;position:absolute;margin-left:3vw;">
-                    <div class="taskbar">
+                    <div class="taskbar" style="width:92vw;">
                         <div class="option" style="background-color: #ED6A5E;"></div>
                         <div class="option" style="background-color: #F5BE4F;"></div>
                         <div class="option" style="background-color: #61C554;"></div>
                     </div>
-                    <div class="pane"></div>
+                    <div class="pane" style="width:92vw; min-height:90vh;"></div>
                 </div>
                 <div class="window my-5" style="width:fit-content;position:absolute;margin-left:4vw;">
-                    <div class="taskbar">
+                    <div class="taskbar" style="width:92vw;">
                         <div class="option" style="background-color: #ED6A5E;"></div>
                         <div class="option" style="background-color: #F5BE4F;"></div>
                         <div class="option" style="background-color: #61C554;"></div>
                     </div>
-                    <div class="pane" style="color: var(--text-color);">
+                    <div class="pane" style="width:92vw; min-height:90vh;">
                         <style type="text/css" media="screen">
   .container {
     position: absolute;
