@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contact</title>
+    <title>Information Presentation</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
@@ -25,11 +25,14 @@
 
             --color-5: #9CA9B4;
             --color-6: #FFFFFF;
+            --text-color: var(--bs-body-color);
             --win-bkg-color: var(--color-6);
             --win-bdr-color: var(--color-5);
+            --nav-color: var(--text-color);
+            --nav-active: var(--color-3);
         }
 
-        /* @media (prefers-color-scheme: dark){
+        @media (prefers-color-scheme: dark){
             body {
                 --bkg-img: url("/ADHD-Website/main/assets/images/background-dark.png");
                 --color-1: #AFAFB6;
@@ -37,10 +40,13 @@
                 --color-3: #69639C;
                 --color-4: #110E24;
                 
+                --text-color: var(--color-6);
                 --win-bkg-color: var(--color-4);
                 --win-bdr-color: var(--color-1);
+                --nav-color: var(--text-color);
+                --nav-active: var(--color-3);
             }
-        } */
+        }
 
         body {
             --bdr-rad: 12px;
@@ -49,8 +55,12 @@
             background-size: cover;
         }
 
+        p, li, a, span {
+            font-size: large;
+        }
+
         div.taskbar {
-            width:92vw;
+            color: var(--text-color);
             height:3vh;
 
             display: flex;
@@ -72,8 +82,9 @@
         }
 
         div.pane {
-            width:92vw;
-            min-height:90vh;
+            color: var(--text-color);
+
+            overflow-wrap: break-word;
 
             border-style: solid;
             border-width: 1px;
@@ -86,23 +97,103 @@
 
     <body>
         <div class="main">
+            <style>
+    div.wrapper.nav {
+        position:absolute;
+        /* width: 35%; */
+        z-index: 3;
+        top: 4vh;
+        left: 15vw;
+    }
+</style>
+
+<div class="wrapper nav">
+    <div class="window" style="width:fit-content;position:absolute;">
+        <div class="taskbar" style="width:60vw;">
+            <div class="option" style="background-color: #ED6A5E;"></div>
+            <div class="option" style="background-color: #F5BE4F;"></div>
+            <div class="option" style="background-color: #61C554;"></div>
+            <span style="margin-left:1vw;">Navigator</span>
+        </div>
+        <div class="pane p-3" style="width:60vw;height:12vh;overflow:scroll;">
+            
+    <a class="link mx-1" href="/ADHD-Website/main/" data-replace="Home"><span class="p-0" style="font-size:xx-large;">Home</span></a>
+
+
+<a class="link mx-1" href="/ADHD-Website/main/distract" data-replace="Distractions"><span class="p-0" style="font-size:xx-large;">Distractions</span></a>
+
+
+<a class="link mx-1" href="/ADHD-Website/main/decide-fatigue" data-replace="Decision Fatigue"><span class="p-0" style="font-size:xx-large;">Decision Fatigue</span></a>
+
+
+<a class="link mx-1" href="/ADHD-Website/main/navigation" data-replace="Navigation"><span class="p-0" style="font-size:xx-large;">Navigation</span></a>
+
+
+        </div>
+    </div>
+</div>
             <div class="wrapper">
                 <div class="window my-4" style="width:fit-content;position:absolute;margin-left:3vw;">
-                    <div class="taskbar">
+                    <div class="taskbar" style="width:92vw;">
                         <div class="option" style="background-color: #ED6A5E;"></div>
                         <div class="option" style="background-color: #F5BE4F;"></div>
                         <div class="option" style="background-color: #61C554;"></div>
                     </div>
-                    <div class="pane"></div>
+                    <div class="pane" style="width:92vw; min-height:90vh;"></div>
                 </div>
                 <div class="window my-5" style="width:fit-content;position:absolute;margin-left:4vw;">
-                    <div class="taskbar">
+                    <div class="taskbar" style="width:92vw;">
                         <div class="option" style="background-color: #ED6A5E;"></div>
                         <div class="option" style="background-color: #F5BE4F;"></div>
                         <div class="option" style="background-color: #61C554;"></div>
                     </div>
-                    <div class="pane">
-                        
+                    <div class="pane" style="width:92vw; min-height:90vh;">
+                        <div style="margin: 5%; margin-top: 100px;">
+    <header>
+        <h1 class="display-4">Creating ADHD-Friendly Information Separation</h1>
+    </header>
+
+    <div style="margin-left: 2%;">
+        <section id="introduction">
+            <h2 class="display-6">Introduction</h2>
+            <p>Organizing information in an ADHD-friendly way involves clear separation, visual hierarchy, and concise
+                presentation. Let's explore these principles.</p>
+        </section>
+    
+        <section id="organization">
+            <h2 class="display-6">Organization</h2>
+            <p>Group related information together. Use clear headings, subheadings, and bullet points to break down content
+                into easily digestible chunks.</p>
+            <ul>
+                <li>Group similar topics</li>
+                <li>Use descriptive headings</li>
+                <li>Employ bullet points for lists</li>
+            </ul>
+        </section>
+    
+        <section id="visual-hierarchy">
+            <h2 class="display-6">Visual Hierarchy</h2>
+            <p>Emphasize important information through visual cues. Use larger font sizes, bold text, and colors to create a
+                clear hierarchy of information.</p>
+            <ul>
+                <li>Highlight key points</li>
+                <li>Use a consistent color scheme</li>
+                <li>Make important links noticeable</li>
+            </ul>
+        </section>
+    
+        <section id="conciseness">
+            <h2 class="display-6">Conciseness</h2>
+            <p>Avoid information overload. Be concise and to the point. Eliminate unnecessary details and provide summaries
+                where possible.</p>
+            <ul>
+                <li>Keep paragraphs short</li>
+                <li>Provide summaries or key takeaways</li>
+                <li>Avoid unnecessary details</li>
+            </ul>
+        </section>
+    </div>
+</div>
                     </div>
                 </div>
             </div>
